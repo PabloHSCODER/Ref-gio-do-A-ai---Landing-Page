@@ -1,0 +1,123 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Refúgio do Açai</title>
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+
+            <ul class="menu-lista">
+                <a href="#"><img src="Imagens/logo.jfif" alt="logo"></a>
+                <li><a href="#descubra">CONHEÇA NOSSO AÇAI</a></li>
+                <li><a href="#trabalhe">TRABALHE CONOSCO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="Frase-inicio">
+        <h1>VENHA PARA O <span>REFUGIO DO AÇAI</span> MATAR SEU CALOR E VONTADE DE UM AÇAÍ GELADINHO <span>.</span></h1>
+    </section>
+
+    <section id="descubra" class="Acai-Container">
+        <div class="text-titulo">
+            <h2>DESCUBRA PORQUE NOSSO AÇAI É TÃO ADORADO</h2>
+            <div class="subtitulo">
+                <h3>Nosso açaí não é apenas uma sobremesa; é uma <span>experiência única e inigualável</span> que
+                    desperta todos os seus sentidos. Diferente dos demais, nosso açaí é feito com uma seleção rigorosa
+                    das <span>melhores polpas</span>, diretamente das florestas da Amazônia, garantindo o <span>sabor
+                        autêntico e puro</span> que só a natureza pode oferecer<span>.</span></h3>
+            </div>
+        </div>
+        <div class="image-container">
+
+            <img src="Imagens/Açai copo.png" alt="Acai" class="Acai-image">
+            <img src="Imagens/Fundo.jpg" alt="Fundo" class="Overlay-image">
+        </div>
+    </section>
+
+    <section class="acais-destaque">
+        <h2>MAIS VENDIDOS !</h2>
+        <div class="acais-container">
+            <div class="acai-card">
+                <img src="Imagens/Copo1.jpg" alt="Açaí com Frutas">
+                <div class="acai-info">
+                    <h3>Açaí com Frutas</h3>
+                    <p>Uma deliciosa combinação de açaí com frutas frescas.</p>
+                </div>
+            </div>
+            <div class="acai-card">
+                <img src="Imagens/Copo2.jpg" alt="Açaí Diet">
+                <div class="acai-info">
+                    <h3>Açaí Diet</h3>
+                    <p>Açaí sem açúcar adicionado, ideal para dietas com restrição de açúcar e controle de glicose.</p>
+                </div>
+            </div>
+            <div class="acai-card">
+                <img src="Imagens/Copo3.jpg" alt="Açaí com Chocolate">
+                <div class="acai-info">
+                    <h3>Açaí com Chocolate</h3>
+                    <p>Delicioso açaí combinado com chocolate, proporcionando uma experiência cremosa e irresistível para os amantes de cacau.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="trabalhe" class="Trabalhe-Conosco">
+        <h2 class="titulo-produtos">TRABALHE CONOSCO</h2>
+        <h3 class="titulo">Faça parte da nossa Equipe:</h3>
+        <div class="form">
+            <div class="custom-file-upload">
+                <label for="arquivo" class="custom-file-label">
+                    Anexe seu currículo
+                </label>
+                <input type="file" id="arquivo" name="arquivo" accept=".jpg,.jpeg,.png,.pdf">
+                <span id="file-name">Nenhum arquivo selecionado</span>
+            </div>
+
+            <div>
+                <button class="bn33" id="enviarBtn" type="submit">Enviar</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo-container">
+                <img src="Imagens/logo.jfif" alt="Logo da Loja de Açaí" class="logo">
+                <p>REFUGIO DO AÇAI</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const fileInput = document.getElementById('arquivo');
+        const fileName = document.getElementById('file-name');
+
+        fileInput.addEventListener('change', function () {
+            const selectedFile = fileInput.files[0];
+            if (selectedFile) {
+                fileName.textContent = selectedFile.name;
+            } else {
+                fileName.textContent = 'Nenhum arquivo selecionado';
+            }
+        });
+
+        const enviarBtn = document.getElementById('enviarBtn');
+
+        enviarBtn.addEventListener('click', function () {
+            alert('O currículo que você anexou foi enviado com sucesso !')
+        });
+
+    </script>
+</body>

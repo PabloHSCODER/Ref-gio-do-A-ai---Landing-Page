@@ -1,0 +1,336 @@
+/*ESTILIZAÇÃO GERAL*/
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    font-size: 20px;
+    font-family: montserrat;
+}
+
+a{
+    text-decoration: none;
+}
+
+span{
+    color: blueviolet;
+}
+
+/*ESTILIZAÇÃO DO MENU*/
+header{
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    padding: 25px;
+    background: rgb(92,0,154);
+    background: linear-gradient(42deg, rgba(92,0,154,1) 41%, rgba(145,5,241,1) 67%, rgba(143,20,226,1) 79%);
+    z-index: 5000;
+}
+
+
+.menu img{
+    height: 80px;
+    width: 90px;
+    border-radius: 50%;
+}
+
+
+.menu ul, img{
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu li{
+    list-style-type: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    
+}
+
+.menu-lista a{
+    color: white;
+}
+
+.menu li:hover{
+    transform: scale(1.1);
+}
+
+
+/*ESTILIZAÇÃO SEÇÃO SOBRE*/
+
+.Frase-inicio{
+    padding: 200px;
+    background-image: url('Imagens/background.jpg');
+}
+
+
+.Frase-inicio h1{
+    font-size: 40px;
+    padding-top: 50px;
+    text-align: center;
+    color: white;
+}
+
+/*ESTILIZAÇÃO SOBRE NOSSO AÇAI*/
+
+.Acai-Container{
+    display: flex;
+    align-items: center;
+}
+
+
+.Acai-Container .text-titulo h2{
+    text-align: center;
+    background: rgb(92,0,154);
+    background: linear-gradient(42deg, rgba(92,0,154,1) 41%, rgba(145,5,241,1) 67%, rgba(143,20,226,1) 79%);
+    color: white;
+}
+
+.image-container{
+    position: relative;
+}
+
+.Overlay-image{
+    width: 700px;
+    height: 700px;
+    display: block;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    background-color: grey;
+}
+
+.Acai-image{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    bottom: 20px;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+.text-titulo h2{
+    padding: -2px;
+}
+
+.subtitulo{
+    padding: 15px;  
+    text-align: justify;
+}
+
+/*SEÇÃO SOBRE OS TIPOS DE AÇAI*/
+.acais-destaque h2 {
+    background: rgb(92,0,154);
+    background: linear-gradient(42deg, rgba(92,0,154,1) 41%, rgba(145,5,241,1) 67%, rgba(143,20,226,1) 79%);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.acais-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.acai-card {
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.acai-card img {
+    width: 100%;
+    height: auto;
+}
+
+.acai-info {
+    padding: 15px;
+}
+
+.acai-info h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #000000;
+}
+
+.acai-info p {
+    margin: 10px 0 0;
+    color: #777;
+}
+
+.acai-card:hover {
+    transform: scale(1.05);
+    border: 2px solid purple;
+}
+
+/*Seção Trabalhe Conosco*/
+.Trabalhe-Conosco h3,form{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.Trabalhe-Conosco h2{
+    text-align: center;
+    background: rgb(92,0,154);
+    background: linear-gradient(42deg, rgba(92,0,154,1) 41%, rgba(145,5,241,1) 67%, rgba(143,20,226,1) 79%);
+    color: white;
+    padding: 20px;
+    padding-bottom: 20px;
+}
+
+.Trabalhe-Conosco h3{
+    padding-top: 20px;
+}
+    
+
+.form{
+    text-align: center;
+    padding: 20px;
+}
+
+.form input{
+    text-align: center;
+}
+
+.bn33{
+    justify-content: center;
+    border: 5em;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    background-color: purple;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    padding: 0.7em 2em;
+    border-radius: 60px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+    -webkit-transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s;
+    color: white;
+}
+
+.bn33:hover{
+    box-shadow: 1px 1px 10px purple;
+    transform: 1s;
+    background: rgb(92,0,154);
+    background: linear-gradient(42deg, rgba(92,0,154,1) 41%, rgba(145,5,241,1) 67%, rgba(143,20,226,1) 79%);
+}
+
+.custom-file-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.custom-file-label {
+    cursor: pointer;
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 16px;
+}
+
+.custom-file-label:hover {
+    background-color: #5c009a;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+
+#file-name {
+    font-size: 14px;
+    color: #555;
+}
+
+/*ESTILIZAÇÃO DO RODAPÉ*/
+footer {
+    margin-top: auto;
+    background: rgb(92,0,154);
+    background: linear-gradient(42deg, rgba(92,0,154,1) 41%, rgba(145,5,241,1) 67%, rgba(143,20,226,1) 79%);
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    text-align: center;
+    height: auto; /* Ajusta a altura para se ajustar ao conteúdo */
+    margin-top: 60px;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    position: relative;
+    padding: 0 15px; /* Adiciona padding lateral */
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 60px;
+}
+
+footer p {
+    padding: 20px;
+    font-size: 24px;
+    margin: 0;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    footer {
+        padding: 10px 0;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    footer p {
+        padding: 10px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 5px 0;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    footer p {
+        padding: 5px;
+        font-size: 16px;
+    }
+}
